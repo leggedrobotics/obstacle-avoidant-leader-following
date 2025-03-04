@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obstacle-Avoidant Leader Following with a Quadruped Robot</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="" />
+    <meta
+      name="keywords"
+      content="Human-Centered Robotics, Human Detection and Tracking, Legged Robots, Robotics Research"
+    />
+    <!-- <meta name="author" content="Research Paper Platform" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="robots"
+      content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    /> -->
+
+    <!-- Open Graph Meta Tags (For Social Media Sharing) -->
+    <!-- <meta
+      property="og:title"
+      content="Research Papers - Explore Cutting-Edge Research"
+    />
+    <meta
+      property="og:description"
+      content=""
+    />
+    <meta property="og:image" content="path-to-your-image.jpg" />
+    <meta property="og:url" content="https://www.yourwebsite.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Research Paper Platform" /> -->
+
+    <!-- Twitter Meta Tags (For Twitter Sharing) -->
+    <!-- <meta
+      name="twitter:title"
+      content="Research Papers - Explore Cutting-Edge Research"
+    />
+    <meta
+      name="twitter:description"
+      content=""
+    />
+    <meta name="twitter:image" content="path-to-your-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" /> -->
+
+    <!-- Canonical Link -->
+    <!-- <link rel="canonical" href="https://www.yourwebsite.com" /> -->
+
+    <!-- Favicon for different platforms -->
+    <link
+      rel="icon"
+      href="Assets/Favicon/icons8-research-color-16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="Assets/Favicon/icons8-research-color-32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="Assets/Favicon/icons8-research-color-70.png"
+      sizes="70x70"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="Assets/Favicon/icons8-research-color-72.png"
+      sizes="72x72"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="Assets/Favicon/icons8-research-color-96.png"
+      sizes="96x96"
+      type="image/png"
+    />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <!-- <a href="#abstract">Abstract</a>
+      <a href="#introduction">Introduction</a>
+      <a href="#methodology">Methodology</a>
+      <a href="#results">Results</a>
+      <a href="#conclusion">Conclusion</a> -->
+      <button class="toggle-btn" onclick="toggleDarkMode()">
+        Toggle Dark Mode
+      </button>
+    </nav>
+
+    <!-- Step 1 Start: Header Part -->
+
+    <!-- 
+    Remove if not applicable
+    Edit below todo text
+    Add URL link by removing # for each authers. Link can be GitHub, LinkedIn, Google Schooler, Website or other
+    -->
+
+    <div class="header">
+      <h1>Obstacle-Avoidant Leader Following with a Quadruped Robot</h1>
+      <div class="authors">
+        <p>
+          <a href="https://scholar.google.com/citations?user=nev9IY0AAAAJ&hl=en&authuser=1&oi=ao">Carmen Scheidemann</a><sup>1*</sup>,
+          <a href="https://scholar.google.com/citations?user=y4b7rP8AAAAJ&hl=en&authuser=1&oi=sra">Lennart Werner</a><sup>1</sup>,
+          <a href="https://scholar.google.com/citations?user=FCprmFMAAAAJ&hl=en&authuser=1&oi=ao">Victor Reijgwart</a><sup>2</sup>,
+          <a href="https://scholar.google.com/citations?user=QZKCzOQAAAAJ&hl=en&authuser=1&oi=ao">Andrei Cramariuc</a><sup>1</sup>,
+          <a href="#">Joris Chomarat</a><sup>1</sup>,
+          <a href="#">Jia-Ruei Chiu</a><sup>1</sup>,
+          <a href="https://scholar.google.com/citations?user=MDIyLnwAAAAJ&hl=en&authuser=1&oi=sra">Roland Siegwart</a><sup>2</sup>,
+          <a href="https://scholar.google.com/citations?user=DO3quJYAAAAJ&hl=en&authuser=1&oi=ao">Marco Hutter</a><sup>1</sup>
+        </p>
+        <p>
+          <sup>1</sup>Robotic Systems Lab, ETH Zurich &nbsp;&nbsp; <sup>2</sup>Autonomous Systems Lab, ETH Zurich
+        </p>
+        <p>
+          <sup>*</sup
+          ><a href="carmens@leggedrobotics.com">carmens@leggedrobotics.com</a>
+        </p>
+        <p>📌 Accepted for: ICRA 2025, Atlanta, USA</p>
+      </div>
+    </div>
+
+    <!-- Step 1 End: Header Part -->
+    <!-- Step 2 Start: Button for links -->
+
+    <!-- 
+    Add URL links for each buttons according to name mentioned
+    Remove # and add the link
+    Add new button link if required
+    Remove this step if not applicable
+    -->
+
+    <div class="buttons">
+      <a href="https://arxiv.org/abs/2410.00572" target="_blank">Paper</a>
+      <a href="https://www.youtube.com/watch?v=HWA4AYa9Oqc" target="_blank">Video</a>
+      <!-- <a href="#" target="_blank">Code</a>
+      <a href="#" target="_blank">Dataset</a>
+      <a href="#" target="_blank">Model</a> -->
+      <a href="#bibtex">BibTex</a>
+    </div>
+
+    <!-- Step 2 End: Button for links -->
+
+    <!-- Step 3 Start: Add your paper abstract -->
+
+    <!-- 
+    Please do not remove below H2 heading tag. Add your HTML code after H2 HTML tag or add text inside P HTML tag. 
+    Remove this step if not applicable
+    -->
+
+    <!-- Single YouTube Video -->
+    <div class="video-section">
+      <!-- <h3>Paper Video</h3> -->
+      <div class="video-container">
+        <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/HWA4AYa9Oqc?si=XBh5sDHhLQzrKfII" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <!-- <p>
+        TODO: This is the short explanation paragraph of the video. Add your
+        paragraph here if required
+      </p> -->
+    </div>
+
+    <div class="abstract" id="abstract">
+      <h2>Abstract</h2>
+      <p>Personal mobile robotic assistants are expected to find wide applications in industry and healthcare. 
+         For example, people with limited mobility can benefit from robots helping with daily tasks, 
+         or construction workers can have robots perform precision monitoring tasks on-site. 
+         However, manually steering a robot while in motion requires significant concentration from the operator, 
+         especially in tight or crowded spaces. This reduces walking speed, and the constant need for vigilance 
+         increases fatigue and, thus, the risk of accidents. This work presents a virtual leash with which a robot 
+         can naturally follow an operator. We use a sensor fusion based on a custom-built RF transponder, RGB cameras, 
+         and a LiDAR. In addition, we customize a local avoidance planner for legged platforms, which enables us to 
+         navigate dynamic and narrow environments. We successfully validate on the ANYmal platform the robustness 
+         and performance of our entire pipeline in real-world experiments. </p>
+    </div>
+
+    <!-- Step 3 End: Add your paper abstract -->
+
+    <!-- Step 4 Start: Add your paper introduction -->
+
+    <!-- 
+    Please do not remove below H2 heading tag. Add your HTML code after H2 HTML tag or add text inside P HTML tag. 
+    Remove this step if not applicable
+    -->
+
+    <!-- <div class="content-section" id="introduction">
+      <h2>Introduction</h2>
+      <p>With mobile robots becoming more ubiquitous in industrial and personal applications, autonomous human following 
+        is a significant step towards increased operator freedom. Such capabilities already exist in many consumer-grade 
+        unmanned aerial vehicles, e.g., following and filming 
+        the user during an activity, such as hiking or riding a bike. Similar human-following capabilities would benefit 
+        the operation of ground-based robots in various scenarios. Speed and efficiency would increase in challenging 
+        environments (e.g., crowds or narrow spaces), as the operator would not have to alternate between moving the 
+        robot and themselves. Additionally, the operator would require less concentration and skill, making the robot 
+        accessible to a broader range of, potentially untrained, users. In particular, it would enable people with 
+        physical disabilities (i.e., wheelchair users) to operate and have personal assistance robots without requiring 
+        a complex physical controller.
+        <br>
+        Most existing human-following solutions for mobile ground robots either rely on tethered connections between the 
+        robot and user (i.e. a physical leash), use sensors to track a transmitter 
+        on the person, use purely image-based tracking, 
+        or follow a human by using a range measurement sensor and maintaining a constant distance to the nearest obstacle 
+        in front of them, predicated on the assumption that this is their human.
+        <br>
+        These systems do not incorporate appropriate path planning and obstacle avoidance systems that could deal with 
+        complex environments, including crowds of moving people or narrow gaps such as doors. While the human operator 
+        implicitly does the high-level planning and, in many cases, clears a path through crowds, fast reactive behavior 
+        and smart local planning are needed to maintain efficiency and safety. Irrespective of path planning algorithms, 
+        most algorithms do not actively track the leader, but only a fixed distance or a beacon. Due to multipathing and 
+        signal interference, wireless beacons on their own are often not robust enough without the assistance of other sensors.
+        <br>
+        This work aims to enable dynamic person following using ANYmal, a quadrupedal robotic platform. We present a full 
+        pipeline from human recognition to tracking and following, allowing the user to decide at what distance and 
+        orientation the robot should follow them. Our approach is a novel multimodal fusion that solves multiple challenges 
+        in the current state of the art. First, we combine cameras and depth sensors to detect people and track the leader. 
+        To disambiguate in crowded situations or after briefly losing line of sight, we additionally develop and integrate a 
+        custom Angle of Arrival sensor so that the leader can carry a beacon that will identify them from others. 
+        Finally, we also tackle the local obstacle avoidance challenge by adapting an existing method, waverider, to ground-
+        based robots. We also enable waverider to actively avoid dynamic obstacles by explicitly integrating them as seperate 
+        Riemannian Motion Policies. This allows our system to navigate challenging environments and adapt its relative 
+        position to the leader depending on need. Ultimately, operator efficiency is increased, and we present a full framework 
+        for autonomous robot control through leader following. To summarize, our contributions are as follows:<br>
+          • A multi-modal sensor fusion pipeline for leader tracking
+          that can deal with temporary occlusions and crowds.<br>
+          • A novel Angle of Arrival (AoA) sensor for robots to
+          accurately track a beacon, even in complex environments.<br>
+          • Integration of a reactive local obstacle avoidance planner
+          for ground-based robots to reactively.
+      </p>
+    </div> -->
+
+    <!-- Step 4 End: Add your paper introduction -->
+
+    <!-- Step 5 Start: Add your paper methodology -->
+
+    <!-- 
+    Please do not remove below H2 heading tag. Add your HTML code after H2 HTML tag or add text inside P HTML tag. 
+    Remove this step if not applicable
+    -->
+
+    <div class="content-section" id="methodology">
+      <h2>Method Overview</h2>
+      <img src="Assets/Figure1.jpg" alt="beep" style="width:837px;height:395px;"/>
+      <p>
+        The presented pipeline consists of three main elements: the sensor fusion (A), leader tracking (B), and leader following (C). We combine
+        measurements from the onboard cameras and LiDAR unit of the robot with an additional custom Angle of Arrival sensor unit. From these
+        measurements, we segment our leader out of the scene, which may involve other people. Using an EKF, we track the leader’s motion, which allows us to
+        keep track of them, even when occluded. By adding a new waverider policy for dynamic obstacles, the robot can follow the leader through crowded spaces,
+        avoiding collision with both the environment and (potentially moving) other people.
+      </p>
+      <p>Please refer to chapters III to V of the paper for a deatailed description of the novel sensor setup and the full software stack.</p>
+    </div>
+
+    <!-- Step 5 End: Add your paper methodology -->
+
+    <!-- Step 6 Start: Add your paper results -->
+
+    <!-- 
+    Please do not remove below H2 heading tag. Add your HTML code after H2 HTML tag or add text inside P HTML tag. 
+    Remove this step if not applicable
+    Below have pre-build code for:
+    -> 3 Images Carousel
+    -> 3 Videos Carousel
+    -> Single YouTube Video
+    -> YouTube Video List
+    If you do not need those, remove them.
+    How to add YouTube Video:
+    -> Go to the video page
+    -> Click Share Button and Click <> Mark
+    -> This will give <iframe></iframe> tag code
+    -> Replace below <iframe></iframe> tag with your code
+    -->
+
+    <div class="content-section" id="results">
+      <h2>Results</h2>
+      <p>We deploy our pipeline on the ANYmal robot and perform
+        leader-following tests in multiple scenarios to validate our
+        approach. Additionally, within the paper, we provide quantitative or qualitative
+        evaluations for the individual components of our pipeline.</p>
+      <!-- <ul>
+        <li>AoA Sensor <br>
+          We evaluate the performance of the AoA sensor in different
+          use cases, showing its usefulness both indoors and outdoors.
+          For a quantitative analysis we measure the AoA readings
+          for a fixed location of the beacon over time periods of one
+          minute. First, we evaluate the optimal scenario: an open space
+          and the beacon in the same x − y plane as the antenna array.
+          We obtain a mean error of 3◦ and a standard deviation of
+          11◦ for various angles. All orientations yield approximately
+          the same error, as is expected, due to the symmetric nature
+          of our beacon in the x − y plane. We observe a slightly
+          decreased performance for the same angles if the beacon is
+          moved 40cm upwards out of a plane. This is to be expected
+          due to the geometry of the antenna array and the assumptions
+          we make for the signal processing. In
+          this scenario, we measure a mean error of 4◦ with a standard
+          deviation of 14◦. As our sensor can handle multi-path effects,
+          we also test in the more challenging scenario of the robot
+          standing directly next to a wall. Here, the mean error grows
+          to 7◦ with a standard deviation of 27◦. With minimal filtering,
+          this level of accuracy still proves sufficient to differentiate
+          between multiple people who are in proximity to each other.</li>
+        <li>Local Navigation <br>
+          We evaluate our extensions to waverider which allow
+          it to operate on ground-based robots and dynamic scenes.
+          We show qualitatively in multiple scenarios that the robot
+          is able to achieve its goal while avoiding both static and
+          dynamic obstacles. It also deals with adversarial behavior
+          from humans trying to block its way. The full navigation
+          pipeline runs on only 2.5 cores of the onboard computer
+          while replanning at a constant rate of 50 Hz.</li>
+        <li>Leader Following <br>
+          We show the robustness of our leader-following pipeline in
+          multiple scenarios designed to emulate common challenges
+          that other systems do not tackle:<br>
+          1) Environment with Obstacles: First, we show our system
+          in a static outdoor environment with two placed obstacles,
+          between which the leader walks (the scene is shown in
+          Figure 4B). The robot successfully follows the leader while
+          dodging the obstacles. The resulting hierarchical 3D recon-
+          struction from Wavemap is shown in Fig 4A, where only
+          the highest resolution is displayed. Important to note is
+          that even the thin legs of the chairs used as obstacles are
+          visible in the map, as is the nearby vegetation. Only a few
+          spurious points from the human are visible, showing that
+          even computationally inexpensive methods are sufficient to
+          obtain clean maps. The resulting map is used by waverider,
+          as visualized in Figure 4C, to plan the robot trajectory. The
+          figure superimposes some of the obstacle hierarchies used by
+          waverider at different timesteps into a single image. It shows
+          the resulting forces applied to the robot from the different
+          RMP policies, in the form of attractor/repulsor arrows. The
+          predicted leader trajectory is also drawn (purple), and we
+          can see that the robot follows it while still planning its
+          own path around the obstacles. As described in Section III-
+          C, the robot only plans toward the current leader’s relative
+          following position, letting waverider handle the rest, and
+          does not explicitly backtrack the leader’s path. We also
+          repeat this experiment while having someone else block the
+          robot’s path. In all but one experiment, the robot dodged the
+          person and continued tracking the leader. In the one case, it
+          temporarily locked onto them as a leader but quickly noticed
+          the mistake from the AoA beacon readings (see Section III-
+          B) and corrected itself. In such cases it only takes a few
+          seconds until the robot is once again headed towards the
+          correct leader.<br>
+          2) Leader Selection: We evaluate the leader selection and
+          tracking process when multiple people stand beside each
+          other, as shown in Figure 5. Our AoA sensor allows us to
+          easily tackle this common-place scenario. In the experiment,
+          we initialized the robot with multiple people in front of it.
+          Throughout multiple runs, it was always able to correctly
+          predict the leader and, upon leader motion, start following
+          them. Even in cases when the leader’s path went around
+          the other person, our tracking system maintained the correct
+          target throughout the temporary occlusion.<br>
+          3) Dynamic Indoor Scenes: Finally, we also show robustness 
+          in complex scenarios. We perform leader following in
+          indoor scenarios, which are challenging due to the increased
+          number of obstacles and the degradation in signal quality
+          from the AoA beacon. Simultaneously, we also have people
+          interfere with the robot, coming between the leader and the
+          robot or forcing it to dodge them to continue its path. In some
+          instances, the leader tracking temporarily switches to one
+          of the passing people. However, the robot can recover and
+          continue tracking the correct leader, showcasing the resilience
+          of our proposed method. This shows we are able to address
+          and overcome issues and challenges described by existing
+          state-of-the-art research.</li>
+      </ul> -->
+    </div>
+
+    <!-- Single YouTube Video -->
+    <!-- <div class="video-section">
+      <h3>Demo Video</h3>
+      <div class="video-container">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/ysFav0b472w?si=Rxxp3R6_tkBXAEmP"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div> -->
+
+    <!-- YouTube Video List -->
+    <!-- <div class="video-section">
+      <h3>Demo Videos List</h3>
+      <div class="video-container">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/videoseries?si=Alenj7M9_gg7Xv49&amp;list=PL95lT3XlM14SgZHmmKn1mGSAAQc8ycq8v"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div> -->
+
+    <!-- Step 6 End: Add your paper results -->
+
+    <!-- Step 7 Start: Add your paper conclusion -->
+
+    <!-- 
+    Please do not remove below H2 heading tag. Add your HTML code after H2 HTML tag or add text inside P HTML tag. 
+    Remove this step if not applicable
+    -->
+
+    <div class="content-section" id="conclusion">
+      <h2>Conclusion</h2>
+      <p>In this paper we have presented a end-to-end pipeline for
+        a quadrupedial robot, enabling it to follow a human leader
+        through dynamic environments. The solution is minimally
+        invasive for the human operator, as it only requires them to
+        carry a lightweight, pocket-sized transmitter beacon. Robust
+        multi-sensor fusion allows us to navigate both in open spaces
+        and through moving crowds, without loosing track of the
+        operator. Our system enables robots to move into more
+        commonplace settings, as it reduces the burden of operator
+        training. This is particularly interesting for personal assistance
+        robots, such as those that could extend the mobility of people
+        with disabilities or for applications where robots assist in the
+        inspection of industrial sites.</p>
+    </div>
+
+    <!-- Step 7 End: Add your paper conclusion -->
+
+    <!-- Step 8 Start: Add your paper references -->
+
+    <!-- 
+    Please only edit below between CODE tags - TODOs
+    Remove this step if not applicable
+    -->
+
+    <div class="bibtex-section" id="bibtex">
+      <h2>BibTeX</h2>
+      <button class="bibtex-copy-button" onclick="copyBibTeX()">
+        Copy to Clipboard
+      </button>
+      <pre>
+        <!-- Please edit only below details -->
+        <code class="language-bibtex">
+          @article{scheidemann2024leaderfollowing,
+            title={Obstacle-Avoidant Leader Following with a Quadruped Robot},
+            author={Carmen Scheidemann and Lennart Werner and Victor Reijgwart and Andrei Cramariuc 
+            and Joris Chomarat and Jia-Ruei Chiu and Roland Siegwart and Marco Hutter},
+            booktitle={2025 IEEE International Conference on Robotics and Automation (ICRA)},
+            year={2024},
+            month={October}
+          }
+        </code>
+      </pre>
+    </div>
+
+    <!-- Step 8 End: Add your paper references -->
+
+    <!-- Step 9 Start: Add your paper acknowledgement -->
+
+    <!-- 
+    Please do not remove below H2 heading tag. Add your HTML code after H2 HTML tag or add text inside P HTML tag. 
+    Remove this step if not applicable
+    -->
+
+    <!-- <div class="content-section" id="acknowledgement">
+      <h2>Acknowledgement</h2>
+      <p>TODO: Add Acknowledgement if applicable or remove this</p>
+    </div> -->
+
+    <!-- Step 9 End: Add your paper acknowledgement -->
+
+    <div class="footer">
+      <!-- Step 10 Start: Edit footer -->
+      <p>© 2025 Robotic Systems Lab, ETH Zurich. All rights reserved.</p>
+      <!-- Step 10 End: Edit footer -->
+      <!-- Please do not remove below code. -->
+      <p>
+        Website template free to borrow from
+        <a
+          href="https://github.com/indramal/iNdra-GitHub-Page-Template-For-Resarch"
+          >here</a
+        >.
+      </p>
+       <div>
+          <!-- Please remove below code of page count or edit indragithubpagetemplate with your name. -->
+    <!-- <img src="https://profile-counter.glitch.me/indragithubpagetemplate/count.svg" alt="Profile Counter"> -->
+</div>
+
+    <!-- Do not edit below button -->
+    <button class="scrollUpBtn" id="scrollUpBtn" onclick="scrollToTop()">
+      ⬆
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
