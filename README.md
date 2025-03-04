@@ -1,1 +1,0 @@
-# obstacle-avoidant-leader-following
